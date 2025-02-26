@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  box-sizing: border-box;
+  font-family: Inter;;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --background-hex: #ffffff;
+    --foreground: 0 0% 0%;
+    --foreground-hex: #000000;
+    --card: 0 0% 99%;
+    --card-hex: #fcfcfc;
+    --card-foreground: 0 0% 0%;
+    --card-foreground-hex: #000000;
+    --popover: 0 0% 100%;
+    --popover-hex: #ffffff;
+    --popover-foreground: 174 15% 38%;
+    --popover-foreground-hex: #53716e;
+    --primary: 178 70% 39%;
+    --primary-hex: #1ea8a3;
+    --primary-foreground: 0 0% 100%;
+    --primary-foreground-hex: #ffffff;
+    --secondary: 177 36% 72%;
+    --secondary-hex: #9dd1ce;
+    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground-hex: #000000;
+    --muted: 0 0% 99%;
+    --muted-hex: #fcfcfc;
+    --muted-foreground: 0 0% 0%;
+    --muted-foreground-hex: #000000;
+    --accent: 358 70% 61%;
+    --accent-hex: #E1575C;
+    --accent-foreground: 0 0% 0%;
+    --accent-foreground-hex: #000000;
+    --destructive: 5 100% 53%;
+    --destructive-hex: #ff2510;
+    --destructive-foreground: 0 0% 0%;
+    --destructive-foreground-hex: #000000;
+    --border: 0 0% 96%;
+    --border-hex: #f5f5f5;
+    --input: 0 0% 96%;
+    --input-hex: #f5f5f5;
+    --ring: 178 70% 39%;
+    --ring-hex: #1ea8a3;
+    --chart-1: 178 70% 39%;
+    --chart-1-hex: #1ea8a3;
+    --chart-2: 238 70% 39%;
+    --chart-2-hex: #1e23a8;
+    --chart-3: 358 70% 39%;
+    --chart-3-hex: #a81e23;
+    --chart-4: 58 70% 39%;
+    --chart-4-hex: #a8a31e;
+    --chart-5: 358 70% 61%;
+    --chart-5-hex: #E1575C;
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --background-hex: #000000;
+    --foreground: 0 0% 100%;
+    --foreground-hex: #ffffff;
+    --card: 0 0% 2%;
+    --card-hex: #050505;
+    --card-foreground: 0 0% 100%;
+    --card-foreground-hex: #ffffff;
+    --popover: 0 0% 0%;
+    --popover-hex: #000000;
+    --popover-foreground: 177 36% 72%;
+    --popover-foreground-hex: #9dd1ce;
+    --primary: 178 70% 39%;
+    --primary-hex: #1ea8a3;
+    --primary-foreground: 0 0% 100%;
+    --primary-foreground-hex: #ffffff;
+    --secondary: 174 15% 38%;
+    --secondary-hex: #53716e;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-foreground-hex: #ffffff;
+    --muted: 0 0% 2%;
+    --muted-hex: #050505;
+    --muted-foreground: 0 0% 100%;
+    --muted-foreground-hex: #ffffff;
+    --accent: 358 70% 61%;
+    --accent-hex: #E1575C;
+    --accent-foreground: 0 0% 0%;
+    --accent-foreground-hex: #000000;
+    --destructive: 0 100% 47%;
+    --destructive-hex: #f00000;
+    --destructive-foreground: 0 0% 0%;
+    --destructive-foreground-hex: #000000;
+    --border: 0 0% 22%;
+    --border-hex: #373737;
+    --input: 0 0% 22%;
+    --input-hex: #373737;
+    --ring: 178 70% 39%;
+    --ring-hex: #1ea8a3;
+    --chart-1: 178 70% 39%;
+    --chart-1-hex: #1ea8a3;
+    --chart-2: 238 70% 39%;
+    --chart-2-hex: #1e23a8;
+    --chart-3: 358 70% 39%;
+    --chart-3-hex: #a81e23;
+    --chart-4: 58 70% 39%;
+    --chart-4-hex: #a8a31e;
+    --chart-5: 358 70% 61%;
+    --chart-5-hex: #E1575C;
+  }
+}
+
+/* Viewport-aware container class */
+.app-container {
+  /* Fallback for older browsers: */
+  height: 100vh;
+  width: 100vw;
+  /* If supported, use stable viewport units: */
+  @supports (height: 100svh) {
+    height: 100svh;
+    width: 100svw;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
